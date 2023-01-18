@@ -1,0 +1,19 @@
+h4 {
+  font-family: Hanson;
+}
+
+.photo-control {
+    min-height: 300px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px dashed blue;
+    margin: 5px;
+}
+
+.form-group p {
+    margin-left: 2rem;
+}
+
+.card-header h4 {
+    text-align: center;
+}

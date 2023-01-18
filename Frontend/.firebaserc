@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "tor-market-1337"
+  },
+  "targets": {
+    "tor-market-1337": {
+      "hosting": {
+        "listings": [
+          "tor-market-1337"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-sm-4 p-0 bg-white">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img *ngIf="property.image" class="card-img-top" src="assets/images/{{property.image}}.png"/>
+        <img *ngIf="!property.image" class="card-img-top" src="assets/images/no-image.png"/>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">{{property.name}}</h3>
+        <div>
+          <h5>{{property.city}}</h5>
+        </div>
+        <div>
+          <h6>£{{property.price}}</h6>
+        </div>
+        <div>
+          <p>{{property.category}}</p>
+        </div>
+        <!-- <div>
+          <p>Available for: </p>
+          <span *ngIF="property.sellRent == 1">Purchase</span>
+          <span *ngIF="property.sellRent == 2">Rent</span>
+        </div> -->
+      </div>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Like</button>
+          <button class="btn btn-success">Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-8 p-0 bg-white">
+    <tabset class="member-tabset">
+      <tab heading="Overview">
+        <div class="overview">
+          <h4 class="card-title">Description</h4>
+          <p>{{property.description}}</p>
+          <h5 class="card-title gap">Available from: </h5>
+          <p>{{property.availableFrom | date}}</p>
+        </div>
+      </tab>
+
+      <tab heading="Photos">
+
+      </tab>
+      <tab heading="Contact">
+        Only logged in users can view this page
+      </tab>
+    </tabset>
+  </div>
+</div>

@@ -1,0 +1,174 @@
+<div class="row mb-5">
+  <div class="col-8 shadow-lg p-0 bg-white">
+    <div class="card">
+      <div class="card-header">
+        <h4 style="color: black">List your item!</h4>
+      </div>
+
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" [formGroup]="addPropertyForm">
+          <div class="tab-panel">
+            <tabset class="member-tabset" #formTabs>
+              <tab heading="Basic info" formGroupName="BasicInfo">
+
+                <div class="form-group col-12 mt-4">
+                  <p class="mt-4">I want to</p>
+                  <div class="btn-group" btnRadioGroup formControlName="SellRent">
+                    <label class="btn btn-outline-primary me-2" btnRadio=1 tabindex="0" role="button" name="SellRent">Sell</label>
+                    <label class="btn btn-outline-primary" btnRadio=2 tabindex="0" role="button" name="SellRent">Lease</label>
+                  </div>
+                  <div class="error-block" *ngIf="SellRent.invalid && NextClicked">
+                    Please select sell or lease!
+                  </div>
+                </div>
+
+                <div class="form-group col-12 mt-4">
+                  <label for="name">Item name</label>
+                  <input type="text" class="form-control" #propName
+                  (keyup)="listingView.name=propName.value"
+                  formControlName="Name">
+                  <div class="error-block">
+                    <!--<span *ngIf="listingView.Name.error('required')">Name required</span>
+                    <span *ngIf="listingView.Name.error('minlength')">Name must be at least 5 characters</span>
+                    <hr />-->
+                  </div>
+                </div>
+
+                <div>
+                  <label for="name">Category</label>
+                  <input type="text" class="form-control" #propCategory
+                  (keyup)="listingView.category=propCategory.value"
+                  formControlName="Type">
+                </div>
+                <br />
+
+                <div>
+                  <label>Price (in GBP)</label>
+                  <input type="text" class="form-control"
+                  #propPrice
+                  (keyup)="listingView.price=propPrice.value"
+                  formControlName="Price">
+                </div>
+
+                <br />
+
+                <div class="form-group col-12">
+                  <div class="d-grid gap-2">
+                    <button type="button" [disabled]="BasicInfo.invalid" class="btn btn-primary btn-block"
+                            (click)="selectTab(1)">
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </tab>
+
+              <tab heading="Address" formGroupName="CityInfo">
+                <div class="form-group col-12 mt-4">
+                  <label>Address</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-12">
+                  <label>Apartment, suite, etc.</label>
+                  <input type="text" class="form-control">
+                </div>
+
+                <div class="form-group col-12">
+                  <label>City</label>
+                  <select #City
+                  (change)="listingView.city=City.options[City.options.selectedIndex].text"
+                  class="form-control"
+                  formControlName="City">
+                    <option value=''>--Select City--</option>
+                    <option *ngFor="let city of cityList" value={{city.id}}>
+                      {{city.name}}
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group col-12 mb-4">
+                  <label>County / State</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-12 mb-4">
+                  <label>ZIP / Postal code</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-primary btn-block mb-2"
+                          (click)="selectTab(2)">
+                    Next
+                  </button>
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-primary btn-block"
+                          (click)="selectTab(0)">
+                    Back
+                  </button>
+                </div>
+              </tab>
+
+              <tab heading="Other details" formGroupName="DescriptionInfo">
+                <div class="form-group col-3 mb-2 mt-4">
+                  <label>Avaialble From</label>
+                  <input type="text"
+                         placeholder="Date"
+                         class="form-control"
+                         formControlName = "AvailableFrom"
+                         bsDatepicker
+                         [bsConfig]="{containerClass: 'theme-dark-blue',
+                   dateInputFormat: 'DD-MM-YYYY'}">
+                </div>
+
+                <div class="form-group col-12 mb-4">
+                  <label>Description</label>
+                  <textarea type="text" class="form-control" rows="6"></textarea>
+                </div>
+
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-primary btn-block mb-2"
+                          (click)="selectTab(3)">
+                    Next
+                  </button>
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-primary btn-block"
+                          (click)="selectTab(1)">
+                    Back
+                  </button>
+                </div>
+              </tab>
+
+              <tab heading="Photos">
+                <div class="form-group col-12 mb-4 mt-4">
+                  <div class="photo-control">
+                    <button class="mt-5" type="button">Upload</button> <br>
+                    This is under construction
+                  </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-primary btn-block"
+                          (click)="selectTab(2)">
+                    Back
+                  </button>
+
+                  <button type="reset" class="btn btn-primary btn-block">Cancel</button>
+                  <button type="submit" [disabled]="BasicInfo.invalid" class="btn btn-primary btn-block">Save</button>
+                </div>
+              </tab>
+
+            </tabset>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 mt-0">
+    <div class="card-header">
+      <h4 style="color:black">Preview</h4>
+    </div>
+    <div class="shadow-lg bg-white pt-1">
+      <app-property-card [property]="listingView" [hideIcons]="true"></app-property-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+[
+  {
+    "Id": 1,
+    "Name": "Herman Miller Mirra 2",
+    "Type": "Chair",
+    "Price": 700,
+    "Image": "prop-1",
+    "SellRent": 1,
+    "City": "Edinburgh",
+    "Description": "Ergonomic chair for 24h support"
+  },
+  {
+    "Id": 2,
+    "Name": "MSI GE76 Raider",
+    "Type": "Laptop",
+    "Price": 1900,
+    "Image": "prop-2",
+    "SellRent": 1,
+    "City": "Livingston",
+    "Description": "Intel i7 x NVIDIA GTX 3070"
+  },
+  {
+    "Id": 3,
+    "Name": "Logitech GPX Superlight",
+    "Type": "Mouse",
+    "Price": 100,
+    "Image": "prop-3",
+    "SellRent": 1,
+    "City": "Glasgow",
+    "Description": "Superlight wireless gaming mouse"
+  },
+  {
+    "Id": 4,
+    "Name": "HyperX Cloud2 with mic",
+    "Type": "Headphones",
+    "Price": 60,
+    "Image": "prop-4",
+    "SellRent": 1,
+    "City": "Brockburn",
+    "Description": "Gaming headset with microphone"
+  },
+  {
+    "Id": 5,
+    "Name": "ACER 24inch 60hz",
+    "Type": "Monitor",
+    "Price": 40,
+    "Image": "prop-5",
+    "SellRent": 1,
+    "City": "Linlithgow",
+    "Description": "Great secondary monitor option"
+  },
+  {
+    "Id": 6,
+    "Name": "Razer Strider L",
+    "Type": "Mousepad",
+    "Price": 25,
+    "Image": "prop-6",
+    "SellRent": 1,
+    "City": "Blackburn",
+    "Description": "Gaming mousepad"
+  },
+  {
+    "Id": 7,
+    "Name": "KLIM Laptop Stand",
+    "Type": "Laptop Stand",
+    "Price": 25,
+    "SellRent": 1,
+    "City": "Dunbar",
+    "Description": "Laptop stand to promote air flow"
+  },
+  {
+    "Id": 8,
+    "Name": "SCOTT E-Bike",
+    "Type": "Bike",
+    "Price": 30,
+    "Image": "prop-8",
+    "SellRent": 2,
+    "City": "Aberdeen",
+    "Description": "E-Bike with built in BOSCH battery"
+  },
+  {
+    "Id": 9,
+    "Name": "Pioneer 4-deck DJ Controller",
+    "Type": "DJ Decks",
+    "Price": 100,
+    "Image": "prop-9",
+    "SellRent": 2,
+    "City": "London",
+    "Description": "DJ deck controller with aux"
+  },
+  {
+    "Id": 10,
+    "Name": "The Orchid Penthouse",
+    "Type": "House",
+    "Price": 5000,
+    "Image": "prop-10",
+    "SellRent": 2,
+    "City": "Bahamas",
+    "Description": "Residence for rent in the Bahamas"
+  }
+]

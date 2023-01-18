@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\Property",
+    "\\src\\app\\Property\\property",
+    "\\src\\app\\Property\\property\\add-listing",
+    "\\src\\app\\Property\\property\\property-card",
+    "\\src\\app\\Property\\property\\property-detail",
+    "\\src\\app\\Property\\property\\property-list"
+  ],
+  "SelectedNode": "\\src\\app\\Property\\property\\add-listing\\add-listing.component.html",
+  "PreviewInSolutionExplorer": false
+}

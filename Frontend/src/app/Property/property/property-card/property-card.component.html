@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-img-wrapper">
+    <img *ngIf="property.image" class="card-img-top" src="assets/images/{{property.image}}.png" />
+    <img *ngIf="!property.image" class="card-img-top" src="assets/images/no-image.png" />
+    <ul *ngIf="!hideIcons" class="list-inline text-center member-icons animate">
+      <li class="list-inline-item">
+        <button routerLink="/item-detail/{{property.id}}" class="btn btn-primary"><i class="fa-sharp fa-solid fa-pen-to-square"></i></button>
+      </li>
+      <li class="list-inline-item">
+        <button class="btn btn-primary"><i class="fa-regular fa-address-book"></i></button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card-body p-1" style="text-align: center">
+    <h2 class="mt-2"> {{property.name}} </h2>
+    <h6 class="pt-2"> {{property.city}} </h6>
+    <!--<hr class="mb-2 mb-2" />-->
+    <h5 class="pt-2"> <span class="font-highlight">£{{property.price}}</span></h5>
+    <p> {{property.category}} </p>
+    <p> {{ property.availableFrom | date }}</p>
+  </div>
+
+</div>
+
