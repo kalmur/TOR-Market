@@ -2,10 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
-import { Ipropertybase } from '../../../model/ipropertybase';
-import { Property } from '../../../model/property';
-import { AlertifyService } from '../../../services/alertify.service';
-import { ListingsService } from '../../../services/listings.service';
+import { Ipropertybase } from '../../model/ipropertybase';
+import { Property } from '../../model/property';
+import { AlertifyService } from '../../services/alertify.service';
+import { ListingsService } from '../../services/listings.service';
 
 @Component({
   selector: 'app-add-listing',

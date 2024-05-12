@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Property } from '../../../model/property';
-import { ListingsService } from '../../../services/listings.service';
+import { Property } from '../../model/property';
+import { ListingsService } from '../../services/listings.service';
 
 @Component({
   selector: 'app-property-detail',

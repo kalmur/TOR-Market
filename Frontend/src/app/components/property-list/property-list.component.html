@@ -1,12 +1,12 @@
 <div class="pt-2 pb-4">
-  <label class="pe-2" style="color: white">Filter by City: </label>
+  <!-- <label class="pe-2" style="color: white">Filter by City: </label>
   <input [(ngModel)]='City' class="me-3"/>
   <button type="button" (click)="onCityFilter()">Search</button>
-  <button type="button" (click)="onCityFilterClear()" class="me-4">Clear</button>
+  <button type="button" (click)="onCityFilterClear()" class="me-4">Clear</button> -->
   <label style="color: white">Sort by: &nbsp; </label>
   <select [(ngModel)]="SortbyParam" class="me-2">
     <option value="Price">Price</option>
-    <option value="City">City</option>
+    <!-- <option value="City">City</option> -->
   </select>
   <button type="button" (click)="onSortDirection()">
     <i *ngIf="SortDirection==='asc'" class="fas fa-sort-alpha-down"></i>

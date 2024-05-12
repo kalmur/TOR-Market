@@ -19,11 +19,11 @@ export class ListingsService {
   }
 
   getProperty(id: number) {
-    return this.http.get<Property>(this.baseUrl + '/listing/detail/' + id.toString());
+    return this.http.get<Property>(this.baseUrl + '/listings/' + id.toString());
   }
 
   getAllProperties(SellRent?: number): Observable<Property[]> {
-    return this.http.get<Property[]>(this.baseUrl + '/listing/type/' + SellRent.toString());
+    return this.http.get<Property[]>(this.baseUrl + '/listings/type/' + SellRent.toString());
   }
 
   addProperty(property: Property) {
